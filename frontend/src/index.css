@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clean Light Theme Foundation */
+    --background: 210 40% 98%;         /* #F8FAFC - crisp slate-50 */
+    --foreground: 222 47% 11%;         /* #0F172A - dark navy */
+    --card: 0 0% 100%;                 /* #FFFFFF - clean pure white */
+    --card-foreground: 222 47% 11%;    /* #0F172A */
+    
+    --primary: 221 83% 53%;            /* #2563EB - vibrant tech blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 40% 96%;          /* #F1F5F9 - soft light slate */
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 40% 96%;              /* #F1F5F9 */
+    --muted-foreground: 215 16% 47%;   /* #64748B - accessible slate secondary */
+    
+    --accent: 226 100% 97%;            /* #EEF2FF - soft indigo tint */
+    --accent-foreground: 224 76% 48%;  /* #3730A3 */
+    
+    --border: 214 32% 91%;             /* #E2E8F0 - subtle border */
+    --ring: 221 83% 53%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-blue-100 selection:text-blue-900;
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+/* Reusable UI utility classes */
+@layer components {
+  .card-clean {
+    @apply bg-white border border-slate-200 rounded-2xl shadow-card transition-all duration-200;
+  }
+  .card-clean-hover {
+    @apply bg-white border border-slate-200 rounded-2xl shadow-card hover:shadow-card-hover hover:border-slate-300 transition-all duration-200;
+  }
+  .badge-soft-blue {
+    @apply bg-blue-50 text-blue-700 border border-blue-200/80 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-soft-purple {
+    @apply bg-purple-50 text-purple-700 border border-purple-200/80 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-soft-green {
+    @apply bg-emerald-50 text-emerald-700 border border-emerald-200/80 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-soft-amber {
+    @apply bg-amber-50 text-amber-700 border border-amber-200/80 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-soft-rose {
+    @apply bg-rose-50 text-rose-700 border border-rose-200/80 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+}

@@ -1,0 +1,29 @@
+﻿# Python
+backend/venv/
+backend/__pycache__/
+backend/**/*.pyc
+__pycache__/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Database / local vector store
+backend/*.db
+backend/qdrant_local_data/
+
+# Uploaded/generated files
+backend/uploads/
+backend/test_resume.pdf
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
